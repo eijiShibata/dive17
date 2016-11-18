@@ -1,0 +1,13 @@
+<div class = "container">
+  <div class = "wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <h1>削除ブログ一覧</h1>
+    <% @blog.each do |blog| %>
+    <div class = "row">
+      <p>タイトル:<%= blog.title %></p>
+      <p>本文:<%= blog.content %></p>
+    </div>
+    <% end %>
+
+    <%= link_to "ブログ一覧にもどる", blogs_path %>
+  </div>
+</div>

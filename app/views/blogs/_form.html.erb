@@ -1,0 +1,12 @@
+<%= form_for(@blog) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control' %>
+  <br>
+  <%= f.label :content %>
+  <%= f.text_field :content, class: 'form-control' %>
+  <br>
+  <%= f.label :status %>
+  <%= f.select :status, [["下書き保存", "1"],["公開", "2"]] %>
+  <br>
+  <%= f.submit '作成', class: 'btn btn-primary btn-block' %>
+<% end %>

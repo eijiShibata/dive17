@@ -1,0 +1,15 @@
+<div class = "container">
+  <div class = "wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <h1>下書き一覧</h1>
+    <% @blog.each do |blog| %>
+    <div class = "row">
+      <p>タイトル:<%= blog.title %></p>
+      <p>本文:<%= blog.content %></p>
+      <%= link_to "編集", edit_blog_path(blog.id), class: 'btn btn-default btn-sm btn-success' %>
+      <%= link_to "削除", blog_path(blog.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+    </div>
+    <% end %>
+    <br><br>
+    <%= link_to "ブログ一覧にもどる", blogs_path %>
+  </div>
+</div>
